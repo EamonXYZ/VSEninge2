@@ -1,0 +1,18 @@
+float PostInv_Width;
+float PostInv_Height;
+struct VS_OUTPUT
+{
+float4 Pos: POSITION;
+float2 texCoord: TEXCOORD0;
+};
+VS_OUTPUT VSMain(float4 Pos: POSITION)
+{
+VS_OUTPUT Out;
+// Simply output the position without transforming it
+Out.Pos = float4(Pos.xy, 0, 1);
+// Texture coordinates are setup so that the full texture
+// is mapped completely onto the screen
+Out.texCoord.x = 0.5 * (1 + Pos.x + PostInv_Width);
+Out.texCoord.y = 0.5 * (1 - Pos.y + PostInv_Height);
+return Out;
+}
