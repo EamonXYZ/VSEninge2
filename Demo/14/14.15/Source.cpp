@@ -151,8 +151,8 @@ bool VSDemoWindowsApplication::PreUpdate()
 bool VSDemoWindowsApplication::OnDraw()
 {
 	VSWindowApplication::OnDraw();
-	VSRenderer::ms_pRenderer->DrawText(NULL, 0, 480, VSColorRGBA(1.0f, 1.0f, 1.0f), _T("Use Key '+' And '-' to Change ImmediateAnimBlendParamter"));
-	VSRenderer::ms_pRenderer->DrawText(NULL, 0, 500, VSColorRGBA(1.0f, 1.0f, 1.0f), _T("ImmediateAnimBlendParamter:%f"), m_fPencent);
+	VSRenderer::ms_pRenderer->DrawText(NULL, 0, 580, VSColorRGBA(1.0f, 1.0f, 1.0f), _T("Use Key '+' And '-' to Change ImmediateAnimBlendParamter"));
+	VSRenderer::ms_pRenderer->DrawText(NULL, 0, 600, VSColorRGBA(1.0f, 1.0f, 1.0f), _T("ImmediateAnimBlendParamter:%f"), m_fPencent);
 	return true;
 }
 void VSDemoWindowsApplication::OnMove(int xPos, int yPos)
